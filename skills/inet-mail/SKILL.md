@@ -104,7 +104,8 @@ via een DNS-publicsleutel. De ontvangende mailserver verifieert de handtekening.
 - Publieke sleutel beschikbaar via DNS
 
 > **Let op:** Internet.nl controleert alleen of een DKIM-record bestaat; de sleutellengte
-> wordt niet getest. Best practice is minimaal 2048-bit RSA.
+> wordt niet getest. RFC 6376 vereist minimaal 1024-bit RSA voor langlevende sleutels;
+> 2048-bit is de huidige operationele aanbeveling (o.a. NIST, M3AAWG), niet een eis uit de RFC.
 
 **DNS-record formaat:**
 
