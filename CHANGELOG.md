@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.7](https://github.com/developer-overheid-nl/skills-internet/compare/v0.2.6...v0.2.7) (2026-05-17)
+
+
+### Opgelost
+
+* **inet-mail:** DKIM-sleutellengte correct toegeschreven ([#179](https://github.com/developer-overheid-nl/skills-internet/issues/179)) ([78d1fbe](https://github.com/developer-overheid-nl/skills-internet/commit/78d1fbe57e16d4fc5f41c0c04aaa5b395890e3e7))
+
 ## [0.2.6](https://github.com/developer-overheid-nl/skills-internet/compare/v0.2.5...v0.2.6) (2026-05-06)
 
 

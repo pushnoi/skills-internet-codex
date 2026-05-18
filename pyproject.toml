@@ -1,6 +1,6 @@
 [project]
 name = "skills-internet"
-version = "0.2.6"
+version = "0.2.7"
 description = "Internet.nl Claude Code Plugin - Test en implementeer moderne internetstandaarden"
 requires-python = ">=3.12"
 dependencies = ["requests>=2.33.1"]
