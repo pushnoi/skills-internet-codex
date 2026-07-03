@@ -4,6 +4,7 @@ name: Internet.nl Codex Plugin
 url: https://github.com/pushnoi/skills-internet-codex
 softwareType: addon
 developmentStatus: development
+softwareVersion: 0.2.7
 
 platforms:
   - linux
