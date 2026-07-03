@@ -1,20 +1,16 @@
-publiccodeYmlVersion: "0.5"
-
+publiccodeYmlVersion: '0.5'
 name: Internet.nl Codex Plugin
 url: https://github.com/pushnoi/skills-internet-codex
 softwareType: addon
 developmentStatus: development
-softwareVersion: 0.2.7
-
+softwareVersion: 0.3.0
 platforms:
   - linux
   - mac
   - windows
-
 description:
   nl:
-    shortDescription: >-
-      Codex plugin voor internet.nl standaarden
+    shortDescription: Codex plugin voor internet.nl standaarden
     longDescription: |
       Codex plugin voor het testen en implementeren van moderne
       internetstandaarden conform internet.nl. Bevat skills voor
@@ -27,10 +23,8 @@ description:
       - Mailstandaarden (DMARC, DKIM, SPF, STARTTLS, DANE)
       - Batch API voor bulk compliance scans
       - Stap-voor-stap implementatiegidsen
-
   en:
-    shortDescription: >-
-      Codex plugin for internet.nl standards
+    shortDescription: Codex plugin for internet.nl standards
     longDescription: |
       Codex plugin for testing and implementing modern internet
       standards as tested by internet.nl. Contains skills for web standards,
@@ -43,23 +37,19 @@ description:
       - Mail standards (DMARC, DKIM, SPF, STARTTLS, DANE)
       - Batch API for bulk compliance scans
       - Step-by-step implementation guides
-
 legal:
   license: EUPL-1.2
   mainCopyrightOwner: Geonovum
-
 intendedAudience:
   countries:
     - NL
   scope:
     - government
-
 localisation:
   availableLanguages:
     - nl
     - en
   localisationReady: false
-
 maintenance:
   type: community
   contacts:

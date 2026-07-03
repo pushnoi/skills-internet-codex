@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/pushnoi/skills-internet-codex/compare/v0.2.7...v0.3.0) (2026-07-03)
+
+
+### Toegevoegd
+
+* add Codex plugin support ([f0d3233](https://github.com/pushnoi/skills-internet-codex/commit/f0d3233c61dce95b2b65efbab8d15d8c400daa5f))
+
+
+### Opgelost
+
+* bump generated plugin manifests in releases ([71de4d5](https://github.com/pushnoi/skills-internet-codex/commit/71de4d504e42abf8d7abb6c2bfa09a0995ee0fdc))
+
 ## [0.2.7](https://github.com/developer-overheid-nl/skills-internet/compare/v0.2.6...v0.2.7) (2026-05-17)
 
 
