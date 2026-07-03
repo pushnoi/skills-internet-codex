@@ -2,5 +2,5 @@
   "name": "internet",
   "displayName": "Internet",
   "description": "CONCEPT — Skills voor moderne internetstandaarden (getest via internet.nl): webstandaarden (HTTPS, TLS, DNSSEC, IPv6, RPKI), mailstandaarden (DMARC, DKIM, SPF, STARTTLS, DANE), batch API en implementatiegidsen uit de toolbox-wiki.",
-  "version": "0.2.7"
+  "version": "0.3.0"
 }
