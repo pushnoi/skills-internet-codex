@@ -30,17 +30,17 @@ De standaarden staan op de
 
 | Skill | Wanneer gebruiken | Standaarden |
 |-------|-------------------|-------------|
-| `/inet-web` | Website testen, HTTPS/TLS instellen, security headers | IPv6, DNSSEC, HTTPS/TLS, HSTS, security headers, security.txt, RPKI |
-| `/inet-mail` | E-mail beveiligen, DNS records voor mail | SPF, DKIM, DMARC, STARTTLS, DANE, IPv6, RPKI |
-| `/inet-api` | Bulk scans via de API, dashboards bouwen | Batch API v2, authenticatie, resultaten JSON |
-| `/inet-toolbox` | Stap-voor-stap implementatie, server configuratie | DNSSEC, HTTPS, DMARC, DKIM, SPF, DANE, IPv6 |
+| `$inet-web` | Website testen, HTTPS/TLS instellen, security headers | IPv6, DNSSEC, HTTPS/TLS, HSTS, security headers, security.txt, RPKI |
+| `$inet-mail` | E-mail beveiligen, DNS records voor mail | SPF, DKIM, DMARC, STARTTLS, DANE, IPv6, RPKI |
+| `$inet-api` | Bulk scans via de API, dashboards bouwen | Batch API v2, authenticatie, resultaten JSON |
+| `$inet-toolbox` | Stap-voor-stap implementatie, server configuratie | DNSSEC, HTTPS, DMARC, DKIM, SPF, DANE, IPv6 |
 
 ### Routeringsbeslisboom
 
-1. Vraag over **testen** van een website? -> `/inet-web`
-2. Vraag over **testen** van e-mail/mailserver? -> `/inet-mail`
-3. Vraag over **implementatie/configuratie** van een standaard? -> `/inet-toolbox`
-4. Vraag over **bulk scans** of de **API**? -> `/inet-api`
+1. Vraag over **testen** van een website? -> `$inet-web`
+2. Vraag over **testen** van e-mail/mailserver? -> `$inet-mail`
+3. Vraag over **implementatie/configuratie** van een standaard? -> `$inet-toolbox`
+4. Vraag over **bulk scans** of de **API**? -> `$inet-api`
 5. Algemene vraag over standaarden? -> Beantwoord hier, verwijs door als nodig
 
 ## Standaardencategorieen en Forum Standaardisatie-status
@@ -121,4 +121,3 @@ gh api repos/internetstandards/Internet.nl-API-docs/git/trees/main?recursive=1 \
 - [internet.nl/test-mail](https://internet.nl/test-mail/) - E-mail testen
 - [Forum Standaardisatie - Open standaarden](https://www.forumstandaardisatie.nl/open-standaarden)
 - [NCSC - Cybersecurity thema's](https://www.ncsc.nl/cybersecurity-themas)
-

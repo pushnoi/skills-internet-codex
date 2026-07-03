@@ -1,6 +1,6 @@
 # Referentie: Mailstandaarden
 
-Achtergrondkennis bij de `/inet-mail` skill. Dit document bevat server-specifieke
+Achtergrondkennis bij de `$inet-mail` skill. Dit document bevat server-specifieke
 configuraties, key rotation-procedures en rapportage-analyse.
 
 ## Postfix-configuratie

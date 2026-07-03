@@ -259,7 +259,7 @@ apt install opendkim opendkim-tools
 # Sleutel genereren
 opendkim-genkey -b 2048 -d example.nl -D /etc/opendkim/keys/ -s selector202602
 
-# Configuratie: zie /inet-mail reference.md voor volledige config
+# Configuratie: zie $inet-mail reference.md voor volledige config
 
 # Postfix koppelen
 # In /etc/postfix/main.cf:
@@ -400,4 +400,3 @@ ping6 example.nl
 
 Zie [reference.md](./reference.md) voor links naar specifieke toolbox-wiki pagina's
 en geavanceerde configuraties.
-

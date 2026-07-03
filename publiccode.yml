@@ -1,7 +1,7 @@
 publiccodeYmlVersion: "0.5"
 
-name: Internet.nl Claude Code Plugin
-url: https://github.com/developer-overheid-nl/skills-internet
+name: Internet.nl Codex Plugin
+url: https://github.com/pushnoi/skills-internet-codex
 softwareType: addon
 developmentStatus: development
 
@@ -13,9 +13,9 @@ platforms:
 description:
   nl:
     shortDescription: >-
-      Claude Code plugin voor internet.nl standaarden
+      Codex plugin voor internet.nl standaarden
     longDescription: |
-      Claude Code plugin voor het testen en implementeren van moderne
+      Codex plugin voor het testen en implementeren van moderne
       internetstandaarden conform internet.nl. Bevat skills voor
       webstandaarden, mailstandaarden, de batch API en implementatiegidsen
       uit de toolbox-wiki. Alle standaarden staan op de
@@ -29,9 +29,9 @@ description:
 
   en:
     shortDescription: >-
-      Claude Code plugin for internet.nl standards
+      Codex plugin for internet.nl standards
     longDescription: |
-      Claude Code plugin for testing and implementing modern internet
+      Codex plugin for testing and implementing modern internet
       standards as tested by internet.nl. Contains skills for web standards,
       mail standards, the batch API, and implementation guides from the
       toolbox wiki. All standards are on the Dutch government mandatory

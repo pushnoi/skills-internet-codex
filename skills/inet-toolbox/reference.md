@@ -1,6 +1,6 @@
 # Referentie: Implementatiegidsen (Toolbox)
 
-Achtergrondkennis bij de `/inet-toolbox` skill. Dit document bevat links naar
+Achtergrondkennis bij de `$inet-toolbox` skill. Dit document bevat links naar
 de toolbox-wiki en geavanceerde configuraties.
 
 ## Toolbox-wiki bronnen

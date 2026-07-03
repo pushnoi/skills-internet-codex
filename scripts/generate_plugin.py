@@ -2,7 +2,7 @@
 """Generate platform-specific plugin.json files from the neutral .plugin/plugin.json.
 
 The .plugin/plugin.json is the single source of truth. This script generates
-platform-specific variants for Claude Code and Cursor (and future platforms).
+platform-specific variants for Codex, Claude Code and Cursor.
 
 Usage:
     python scripts/generate_plugin.py          # generate all platform files
@@ -12,12 +12,15 @@ Usage:
 import copy
 import json
 import sys
+from collections.abc import Callable
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SOURCE_PATH = ROOT_DIR / ".plugin" / "plugin.json"
+CODEX_PATH = ROOT_DIR / ".codex-plugin" / "plugin.json"
 CLAUDE_PATH = ROOT_DIR / ".claude-plugin" / "plugin.json"
 CURSOR_PATH = ROOT_DIR / ".cursor-plugin" / "plugin.json"
+REPOSITORY_URL = "https://github.com/pushnoi/skills-internet-codex"
 
 
 def load_source() -> dict:
@@ -29,6 +32,50 @@ def load_source() -> dict:
 def generate_claude(data: dict) -> dict:
     """Generate Claude Code plugin.json — identical copy of source."""
     return copy.deepcopy(data)
+
+
+def generate_codex(data: dict) -> dict:
+    """Generate Codex plugin.json with Codex-specific discovery metadata."""
+    return {
+        "name": data["name"],
+        "version": data["version"],
+        "description": data["description"],
+        "author": {
+            "name": "developer.overheid.nl; Codex port by pushnoi",
+            "url": REPOSITORY_URL,
+        },
+        "homepage": REPOSITORY_URL,
+        "repository": REPOSITORY_URL,
+        "license": "EUPL-1.2",
+        "keywords": [
+            "internet.nl",
+            "internetstandaarden",
+            "dnssec",
+            "tls",
+            "dmarc",
+            "codex-skill",
+        ],
+        "skills": "./skills/",
+        "interface": {
+            "displayName": "Internet.nl standaarden",
+            "shortDescription": "Test en implementeer moderne internetstandaarden met internet.nl.",
+            "longDescription": (
+                "Codex-plugin met skills voor webstandaarden, mailstandaarden, "
+                "de internet.nl batch API en implementatiegidsen uit de toolbox-wiki. "
+                "Concept: geen officieel product van internet.nl."
+            ),
+            "developerName": "developer.overheid.nl / pushnoi",
+            "category": "Developer Tools",
+            "capabilities": ["Instructions", "Diagnostics", "Configuration"],
+            "websiteURL": REPOSITORY_URL,
+            "defaultPrompt": [
+                "Test mijn website op internet.nl standaarden.",
+                "Configureer DMARC voor mijn domein.",
+                "Scan domeinen via de internet.nl batch API.",
+            ],
+            "brandColor": "#154273",
+        },
+    }
 
 
 def _display_name(name: str) -> str:
@@ -51,7 +98,8 @@ def generate_cursor(data: dict) -> dict:
     return ordered
 
 
-PLATFORMS: dict[str, tuple[Path, callable]] = {
+PLATFORMS: dict[str, tuple[Path, Callable[[dict], dict]]] = {
+    "codex": (CODEX_PATH, generate_codex),
     "claude": (CLAUDE_PATH, generate_claude),
     "cursor": (CURSOR_PATH, generate_cursor),
 }

@@ -12,15 +12,23 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Valideer plugin.json
-        run: python3 -c "import json; json.load(open('.plugin/plugin.json'))"
+      - name: Valideer plugin JSON-bestanden
+        run: |
+          for f in \
+            .plugin/plugin.json \
+            .codex-plugin/plugin.json \
+            .claude-plugin/plugin.json \
+            .cursor-plugin/plugin.json \
+            .agents/plugins/marketplace.json; do
+            python3 -m json.tool "$f" >/dev/null
+          done
 
       - name: Controleer plugin sync
         run: python3 scripts/generate_plugin.py --check
 
       - name: Controleer vereiste bestanden
         run: |
-          for f in LICENSE README.md CHANGELOG.md CLAUDE.md .plugin/plugin.json .claude-plugin/plugin.json .cursor-plugin/plugin.json; do
+          for f in LICENSE README.md CHANGELOG.md AGENTS.md CLAUDE.md .plugin/plugin.json .codex-plugin/plugin.json .claude-plugin/plugin.json .cursor-plugin/plugin.json .agents/plugins/marketplace.json; do
             if [ ! -f "$f" ]; then
               echo "FOUT: $f ontbreekt"
               exit 1
@@ -53,10 +61,6 @@ jobs:
             fi
             if ! grep -q '^description:' "$f"; then
               echo "FOUT: $f mist 'description' in frontmatter"
-              error=1
-            fi
-            if ! grep -q '^model:' "$f"; then
-              echo "FOUT: $f mist 'model' in frontmatter"
               error=1
             fi
           done
@@ -93,7 +97,7 @@ jobs:
 
       - name: Controleer geen hardcoded paden
         run: |
-          if grep -r '/Users/' skills/ .claude-plugin/ README.md 2>/dev/null; then
+          if grep -r '/Users/' skills/ .codex-plugin/ .claude-plugin/ .cursor-plugin/ .agents/ README.md AGENTS.md 2>/dev/null; then
             echo "FOUT: hardcoded gebruikerspaden gevonden"
             exit 1
           fi

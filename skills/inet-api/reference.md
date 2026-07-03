@@ -1,6 +1,6 @@
 # Referentie: Internet.nl Batch API
 
-Achtergrondkennis bij de `/inet-api` skill. Dit document bevat gedetailleerde
+Achtergrondkennis bij de `$inet-api` skill. Dit document bevat gedetailleerde
 API-schema's, rate limits en foutcodes.
 
 ## API-versie

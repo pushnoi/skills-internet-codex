@@ -6,7 +6,11 @@ Alle content in deze repo is in het **Nederlands**: skill descriptions, body tek
 
 ## Repo structuur
 
-- `.claude-plugin/plugin.json` - Plugin manifest (versie wordt automatisch gebumpt door release-please)
+- `.plugin/plugin.json` - Neutrale bronmetadata voor versie en beschrijving
+- `.codex-plugin/plugin.json` - Codex plugin manifest (gegenereerd uit `.plugin/plugin.json`)
+- `.claude-plugin/plugin.json` - Claude Code plugin manifest (gegenereerd uit `.plugin/plugin.json`)
+- `.cursor-plugin/plugin.json` - Cursor plugin manifest (gegenereerd uit `.plugin/plugin.json`)
+- `.agents/plugins/marketplace.json` - Codex marketplace voor installatie uit deze repo
 - `skills/inet/SKILL.md` - Meta-skill (overzicht, routing)
 - `skills/inet-<domein>/SKILL.md` - Domein-skills (4 stuks)
 - `skills/inet-<domein>/reference.md` - Achtergrondinfo per domein
@@ -80,8 +84,8 @@ Toolbox wiki: `https://github.com/internetstandards/toolbox-wiki/`
 ### Linting en tests
 
 ```bash
-uv run ruff check scripts/ tests/       # Linting
-uv run ruff format --check scripts/ tests/  # Format check
+uvx ruff@0.9.7 check scripts/ tests/       # Linting
+uvx ruff@0.9.7 format --check scripts/ tests/  # Format check
 uv run pytest -v                         # Tests
 ```
 
@@ -94,7 +98,7 @@ Pre-commit hooks draaien automatisch ruff + markdownlint bij elke commit.
 **Releases** worden automatisch beheerd door [release-please](https://github.com/googleapis/release-please):
 1. Gebruik [Conventional Commits](https://www.conventionalcommits.org/): `feat:`, `fix:`, `chore:`, `docs:`
 2. release-please maakt automatisch een Release PR aan met gebumpte versies en CHANGELOG
-3. Bij merge van Release PR: GitHub Release + git tag + versie gebumpt in `plugin.json`, `pyproject.toml`, `publiccode.yml`
+3. Bij merge van Release PR: GitHub Release + git tag + versie gebumpt in `plugin.json`, `pyproject.toml`, `publiccode.yml` en `.codex-plugin/plugin.json`
 
 **Belangrijk:** Release PRs van release-please hebben geen CI checks (GITHUB_TOKEN pushes triggeren geen workflows). Push een lege commit om CI te triggeren:
 ```bash

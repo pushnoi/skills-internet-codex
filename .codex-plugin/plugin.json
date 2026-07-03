@@ -1,0 +1,40 @@
+{
+  "name": "internet",
+  "version": "0.2.7",
+  "description": "CONCEPT — Skills voor moderne internetstandaarden (getest via internet.nl): webstandaarden (HTTPS, TLS, DNSSEC, IPv6, RPKI), mailstandaarden (DMARC, DKIM, SPF, STARTTLS, DANE), batch API en implementatiegidsen uit de toolbox-wiki.",
+  "author": {
+    "name": "developer.overheid.nl; Codex port by pushnoi",
+    "url": "https://github.com/pushnoi/skills-internet-codex"
+  },
+  "homepage": "https://github.com/pushnoi/skills-internet-codex",
+  "repository": "https://github.com/pushnoi/skills-internet-codex",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "internet.nl",
+    "internetstandaarden",
+    "dnssec",
+    "tls",
+    "dmarc",
+    "codex-skill"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Internet.nl standaarden",
+    "shortDescription": "Test en implementeer moderne internetstandaarden met internet.nl.",
+    "longDescription": "Codex-plugin met skills voor webstandaarden, mailstandaarden, de internet.nl batch API en implementatiegidsen uit de toolbox-wiki. Concept: geen officieel product van internet.nl.",
+    "developerName": "developer.overheid.nl / pushnoi",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Instructions",
+      "Diagnostics",
+      "Configuration"
+    ],
+    "websiteURL": "https://github.com/pushnoi/skills-internet-codex",
+    "defaultPrompt": [
+      "Test mijn website op internet.nl standaarden.",
+      "Configureer DMARC voor mijn domein.",
+      "Scan domeinen via de internet.nl batch API."
+    ],
+    "brandColor": "#154273"
+  }
+}

@@ -1,6 +1,6 @@
 # Referentie: Webstandaarden
 
-Achtergrondkennis bij de `/inet-web` skill. Dit document bevat protocol-details,
+Achtergrondkennis bij de `$inet-web` skill. Dit document bevat protocol-details,
 server-specifieke configuraties en bronverwijzingen.
 
 ## TLS protocol-details

@@ -19,7 +19,7 @@ metadata:
 
 **Gebruik deze skill wanneer een gebruiker vraagt over mailstandaarden die internet.nl test,
 zoals SPF, DKIM, DMARC, STARTTLS of DANE. Genereer correcte DNS-records en diagnostische
-commando's. Verwijs naar `/inet-toolbox` voor stap-voor-stap implementatiegidsen.**
+commando's. Verwijs naar `$inet-toolbox` voor stap-voor-stap implementatiegidsen.**
 
 ## Overzicht
 
@@ -285,4 +285,3 @@ dig MX example.nl +dnssec +short
 
 Zie [reference.md](./reference.md) voor server-specifieke configuratie (Postfix, Exchange),
 key rotation-procedures en DMARC-rapportage-analyse.
-
